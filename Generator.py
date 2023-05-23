@@ -12,7 +12,7 @@ def GPT(msg):
     
     openai.api_key = info['API_key']
     response = openai.ChatCompletion.create(
-        model = "gpt-3.5-turbo",
+        model = "gpt-4",
         messages = msg,
         temperature = 0
     )
