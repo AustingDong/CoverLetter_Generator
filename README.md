@@ -1,5 +1,5 @@
-# CoverLetter_Generator is a project based on gpt4.0 that autocompletes your cover letter
-
+# CoverLetter_Generator
+## CoverLetter_Generator is a project based on gpt4o that autocompletes your cover letter
 1. Modify your config:
     Go to "change_settings.ipynb" to get details.
 
