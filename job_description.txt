@@ -1,0 +1,56 @@
+Work Term:	2025 - Winter
+Job Type:	Co-op Main
+Job Title:	AI Engineering
+Number of Job Openings:	1
+Job Category (NOC):	2173 Software Engineers and Designers
+Level:	
+Intermediate
+Senior
+Region:	ON - Toronto
+Job - Province/State:	Ontario
+Job - Country:	Canada
+Job Location (If Exact Address Unknown or Multiple Locations):	Toronto
+Employment Location Arrangement:	Hybrid
+Additional Employment Arrangement Location Information:	We are securing an office in Toronto and when that office is opened, this position will be hybrid 2-3 days per week.
+Work Term Duration:	4 month work term
+Job Summary:	Overview:
+Guidepoint seeks an AI Engineer as an integral member of the Toronto-based Data/AI team. The Toronto Technology Hub will serve as the base of our new Data/AI team, dedicated to building a modern data infrastructure for advanced analytics and the development of responsible AI. This strategic investment is integral to Guidepoint's vision for the future, aiming to develop cutting-edge Generative AI and analytical capabilities that will underpin Guidepoint's Next-Gen research enablement platform and data products.
+This will be a hybrid co-op in our new Toronto office.
+
+More about Guidepoint's Technology Team:
+Guidepoint's Technology team thrives on problem-solving and creating happier users. As Guidepoint works to achieve its mission of making individuals, businesses, and the world smarter through personalized knowledge-sharing solutions, the engineering team is taking on challenges to improve our internal application architecture and create new AI-enabled products to optimize the seamless delivery of our services.
+
+
+About Guidepoint:
+Guidepoint is a leading research enablement platform designed to advance understanding and empower our clients' decision-making process. Powered by innovative technology, real-time data, and hard-to-source expertise, we help our clients to turn answers into action.
+Backed by a network of nearly 1.5 million experts and Guidepoint's 1,300 employees worldwide, we inform leading organizations' research by delivering on-demand intelligence and research on request. With Guidepoint, companies and investors can better navigate the abundance of information available today, making it both more useful and more powerful.
+At Guidepoint, our success relies on the diversity of our employees, advisors, and client base, which allows us to create connections that offer a wealth of perspectives. We are committed to upholding policies that contribute to an equitable and welcoming environment for our community, regardless of background, identity, or experience.
+Job Responsibilities:	What You'll Do:
+Collaborate with data engineering and data science teams to innovate and establish best practices
+Collaborate with the product and client services teams to define priorities and influence product roadmap
+Work with senior AI/ML engineers, guiding them in building a modern AI infrastructure and developing responsible AI solutions
+Required Skills:	What You Have:
+Demonstrated proactive engagement with eagerness to learn
+Excellent communication skills, adept at articulating complex ideas with clarity and precision
+Collaborative in approach, actively seeking guidance when necessary
+Skilled in widely used programming languages, notably Python and Nodejs
+Possess a fervent curiosity or keen interest in software design, data structures, and LLMs with a user-centric or product-driven mindset
+Analytical and good with data mining (especially unstructured/text data)
+Familiar with OpenAI APIs and RAG architecture
+Some prompt engineering experience (even in academic context) very nice to have
+Critical thinking and problem-solving abilities
+Compensation and Benefits:	$40/hour
+Targeted Degrees and Disciplines:	
+Targeted Clusters
+- Theme - Computing: Information Systems and Data Management
+Application Information
+Application Deadline:	September 17, 2024 09:00 AM
+Application Documents Required:	University of Waterloo Co-op Work History,Résumé,Grade Report
+Additional Application Information:	Employer will be contacting you directly to make interview arrangements.
+
+Within your application package please include the answer to the following question:
+Outside of your school curriculum, what tools and technologies are you excited about and learning on your own?
+Application Method:	WaterlooWorks
+Company Information
+Organization:	Guidepoint Global LLC
+Division:	Divisional Office

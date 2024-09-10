@@ -1,42 +1,68 @@
-import openai
+import os
+from openai import OpenAI
+from openai.types.beta.threads.message_create_params import (
+    Attachment,
+    AttachmentToolFileSearch,
+)
 import json
 import os
 from docx import Document
 import win32com.client
+from dotenv import load_dotenv
 
-def GPT(msg):
-    
+
+def Coverletter(api_key_var_name, resume_path, job_description_path='./job_description.txt'):
+
     with open('./config.json', 'r') as f:
         info = json.load(f)
 
-    
-    openai.api_key = info['API_key']
-    response = openai.ChatCompletion.create(
-        model = "gpt-4",
-        messages = msg,
-        temperature = 0
+    api_key = os.environ.get(api_key_var_name)
+    if api_key is None:
+        load_dotenv('/my/envs/.env')
+        api_key = os.environ.get(api_key_var_name)
+        
+    client = OpenAI(api_key = api_key)
+
+    assistant = client.beta.assistants.create(
+        model="gpt-4o",
+        description=info["setting"],
+        tools=[{"type": "file_search"}]
     )
-    
-    res = response["choices"][0]["message"]["content"]
-    return res
 
+    thread = client.beta.threads.create()
+    resume_file = client.files.create(file=open(resume_path, "rb"), purpose="assistants")
+    job_description_file = client.files.create(file=open(job_description_path, "rb"), purpose="assistants")
 
-def Coverletter(company, job, date):
+    client.beta.threads.messages.create(
+        thread_id=thread.id,
+        role="user",
+        attachments=[
+            Attachment(
+                file_id=resume_file.id, tools=[AttachmentToolFileSearch(type="file_search")]
+            ),
 
-    with open('./config.json', 'r') as f:
-        info = json.load(f)
+            Attachment(
+                file_id=job_description_file.id, tools=[AttachmentToolFileSearch(type="file_search")]
+            ),
 
-    msg = [
-        {"role":"system", "content":info["setting"]},
-    ]
+        ],
+        content=info["setting"],
+    )
 
-    text = f"Date: {date}, Company name: {company}, Job: {job}"
+    run = client.beta.threads.runs.create_and_poll(
+        thread_id=thread.id, assistant_id=assistant.id, timeout=1000
+    )
 
-    msg.append({"role": "user", "content": text})
+    # Error handling
+    if run.status != "completed":
+        raise Exception("Run failed:", run.status)
 
-    res = GPT(msg)
+    messages_cursor = client.beta.threads.messages.list(thread_id=thread.id)
+    messages = [message for message in messages_cursor]
 
-    return res
+    # Output text
+    res_txt = messages[0].content[0].text.value
+    return res_txt
 
 
 def save_to_word(text, filename):
